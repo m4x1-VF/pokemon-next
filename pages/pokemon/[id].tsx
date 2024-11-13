@@ -9,10 +9,14 @@ interface Props {
 }
 
 const PokemonPage: NextPage<Props> = ({ pokemon }) => {
-  const router = useRouter();
   return (
-    <Layout title="Algun Pokemon">
-      <h1>{pokemon.name}</h1>
+    <Layout title={pokemon.name}>
+      <section className="flex justify-around items-center">
+        <h1 className="text-2xl">{pokemon.name}</h1>
+        <button className="bg-red-500 text-white font-bold px-5 py-1 rounded-xl hover:bg-red-600">
+          Favourite
+        </button>
+      </section>
     </Layout>
   );
 };

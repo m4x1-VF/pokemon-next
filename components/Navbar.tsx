@@ -1,15 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import {
   NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
+  navigationMenuTriggerStyle,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
 import { Toggle } from "./Toggle";
 
@@ -26,15 +22,17 @@ export const Navbar = () => {
           />
         </li>
         <li>
-          <p className="text-2xl font-semibold">Pokémon</p>
+          <Link href="/">
+            <p className="text-2xl font-semibold">Pokémon</p>
+          </Link>
         </li>
       </ul>
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <Link href="/docs" legacyBehavior passHref>
+            <Link href="/favourites" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Documentation
+                Favourites
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>

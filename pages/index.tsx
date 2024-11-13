@@ -12,7 +12,7 @@ const HomePage: NextPage<Props> = ({ pokemons }) => {
   console.log(pokemons);
   return (
     <Layout title="Listado de Pokémons">
-      <ul className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
+      <ul className=" grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 justify-center">
         {pokemons.map((pokemon) => (
           <PokemonCard pokemon={pokemon} key={pokemon.id} />
         ))}
