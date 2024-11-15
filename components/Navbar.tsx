@@ -23,7 +23,7 @@ export const Navbar = () => {
         </li>
         <li>
           <Link href="/">
-            <p className="text-2xl font-semibold">Pokémon</p>
+            <p className="text-2xl font-semibold">Pokémon Web</p>
           </Link>
         </li>
       </ul>
